@@ -23,7 +23,7 @@
 worldpath=/opt/terraria_server/Worlds/
 
 #Load a world and automatically start the server.
-world=/opt/terraria_server/Worlds/Solo.wld
+world=/opt/terraria_server/Worlds/WaltonCloud.wld
 
 #Sets the max number of players allowed on a server.  Value must be between 1 and 255
 maxplayers=8
