@@ -8,7 +8,7 @@
 TERRARIA_SERVER_DIR='/opt/terraria_server'
 
 ######## Wait for networking stuff to come online ########
-sleep 60
+sleep 90
 
 ######## Run Server GitHub Backup ########
 # Create commit on all files with timestamp as message
