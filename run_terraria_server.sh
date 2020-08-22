@@ -19,5 +19,5 @@ sudo git add -A && sudo git commit -a -m "$CURRENT_TIME"
 # Push to GitHub using SSH (as root)
 sudo git push origin master -v
 
-######## Start Minecraft Bedrock Server ########
-sudo /usr/bin/screen -dmS terraria_server /bin/bash -c "$TERRARIA_SERVER_DIR/TerrariaServer.bin.x86_64 -config $TERRARIA_SERVER_DIR/serverconfig.txt >> $TERRARIA_SERVER_DIR/server_console.log"
+######## Start Terraria Server inside it's own terminal because it gets mad if console input goes away ########
+sudo /usr/bin/screen -dmS terraria_server /bin/bash -c "$TERRARIA_SERVER_DIR/TerrariaServer -config $TERRARIA_SERVER_DIR/serverconfig.txt >> $TERRARIA_SERVER_DIR/server_console.log"
