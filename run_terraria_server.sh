@@ -20,4 +20,4 @@ sudo git add -A && sudo git commit -a -m "$CURRENT_TIME"
 sudo git push origin master -v
 
 ######## Start Minecraft Bedrock Server ########
-sudo /usr/bin/screen -dmS terraria_server /bin/bash -c "/opt/terraria_server/run_terraria_server.sh >> /opt/terraria_server/server_console.log"
+sudo /usr/bin/screen -dmS terraria_server /bin/bash -c "$TERRARIA_SERVER_DIR/TerrariaServer.bin.x86_64 -config $TERRARIA_SERVER_DIR/serverconfig.txt >> $TERRARIA_SERVER_DIR/server_console.log"
