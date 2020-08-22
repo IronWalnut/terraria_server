@@ -6,6 +6,7 @@
 # All directory references are relative to TERRARIA_SERVER_DIR.  #
 ##################################################################
 TERRARIA_SERVER_DIR='/opt/terraria_server'
+cd $TERRARIA_SERVER_DIR
 
 ######## Wait for networking stuff to come online ########
 sleep 90
@@ -13,10 +14,10 @@ sleep 90
 ######## Run Server GitHub Backup ########
 # Create commit on all files with timestamp as message
 CURRENT_TIME=$(date "+%Y.%m.%d-%H.%M.%S")
-cd $TERRARIA_SERVER_DIR && sudo git add -A && sudo git commit -a -m "$CURRENT_TIME"
+sudo git add -A && sudo git commit -a -m "$CURRENT_TIME"
 
 # Push to GitHub using SSH (as root)
-cd $TERRARIA_SERVER_DIR && sudo git push origin master -v
+sudo git push origin master -v
 
 ######## Start Minecraft Bedrock Server ########
-cd $TERRARIA_SERVER_DIR && sudo ./TerrariaServer -config /opt/terraria_server/serverconfig.txt
+sudo /usr/bin/screen -dmS terraria_server /bin/bash -c "/opt/terraria_server/run_terraria_server.sh >> /opt/terraria_server/server_console.log"
