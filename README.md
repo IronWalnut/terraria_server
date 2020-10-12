@@ -15,7 +15,7 @@ The `run_terraria_server.sh` script includes logic to save changes and push to t
 sudo /opt/terraria_server/run_terraria_server.sh
 
 # Just starting the server executable
-sudo /opt/terraria_server/TerrariaServer
+sudo /opt/terraria_server/TerrariaServer -config /opt/terraria_server/serverconfig.txt
 ```
 
 ### Cronjob Example (running as sudo):
