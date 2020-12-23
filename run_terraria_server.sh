@@ -9,6 +9,7 @@ TERRARIA_SERVER_DIR='/opt/terraria_server'
 cd $TERRARIA_SERVER_DIR
 
 ######## Wait for networking stuff to come online ########
+echo "Waiting 90 seconds..."
 sleep 90
 
 ######## Run Server GitHub Backup ########
